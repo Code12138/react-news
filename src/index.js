@@ -1,20 +1,18 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
-import {Router, hashHistory, IndexRoute, Route} from 'react-router'
+import {render} from 'react-dom'
+import {Router, Route, hashHistory, IndexRoute} from 'react-router'
 import App from './components/app'
 import NewsContainer from './components/news_container'
 import NewsDetail from './components/news_detail'
 import UserCenter from './components/user_center'
 
-ReactDOM.render(
-  (
+
+render((
   <Router history={hashHistory}>
-  <Route path='/' component={App}>
-  <IndexRoute component={NewsContainer}/>
-  <Route path='/detail/:uniquekey' component={NewsDetail}></Route>
-  <Route path='/usercenter' component={UserCenter}></Route>
-  </Route>
+    <Route path='/' component={App}>
+      <IndexRoute component={NewsContainer}></IndexRoute>
+      <Route path='/news_detail/:id' component={NewsDetail}></Route>
+      <Route path='/user_center' component={UserCenter}></Route>
+    </Route>
   </Router>
-),
-document.getElementById('root')
-)
+), document.getElementById('root'))
