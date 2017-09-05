@@ -26,7 +26,7 @@ export default class MobileNewsBlock extends Component{
 		const newlist = !news
 		?'没有加载到新闻' :news.map((newsItem,index) =>(
 			<Card key={index} className="m_article list-item special_section clearfix">
-			<Link to={`/news_detail/${newsItem.uniquekey}`}/>
+				<Link to={`news_detail/${newsItem.uniquekey}`}>
 				<div className="m_article_img">
 					<img src={newsItem.thumbnail_pic_s} alt={newsItem.title} />
 				</div>
@@ -41,6 +41,7 @@ export default class MobileNewsBlock extends Component{
 						</div>
 					</div>
 				</div>
+				</Link>
 			</Card>
 		))
 

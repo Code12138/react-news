@@ -5,7 +5,7 @@ import {Card,Form,Button,notification,Input} from 'antd'
 const FormItem = Form.Item
  class NewsComments extends Component{
 
-  static  propTypes = {
+  static propTypes = {
     uniqueKey:PropTypes.string.isRequired
   }
   state = {
