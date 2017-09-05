@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import NewsHeader from './news_header'
+import MobileHeader from './MobileHeader'
 import NewsFooter from './news_footer'
-import '../componentsCss/pc.css'
+import '../componentsCss/mobile.css'
 export default class App extends Component {
   render() {
     return (
       <div>
-        <NewsHeader/>
+        <MobileHeader/>
         {this.props.children}
         <NewsFooter />
       </div>
